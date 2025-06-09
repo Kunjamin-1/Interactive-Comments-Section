@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: hsl(228, 33%, 97%);
+}
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    max-width: 42rem;
+}
+
+.comment-card,
+.replied-comment-section {
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.35rem;
+    border-radius: 10px;
+    margin: 0 0 0.8rem 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: none;
+}
+
+.vote,
+.replied-comment-vote {
+    display: flex;
+    height: 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(228, 33%, 97%);
+    padding: 0.6rem;
+    border-radius: 5px;
+}
+
+.vote img,
+.replied-comment-vote img {
+    cursor: pointer;
+    max-width: 0.9rem;
+}
+
+.vote-value,
+.replied-comment-vote-value {
+    font-size: 1.1rem;
+    font-weight: 450;
+    color: hsl(238, 40%, 52%);
+}
+
+.comment-section,
+.replied-user-comment-section {
+    min-height: 8rem;
+    width: 100%;
+}
+
+.user-avatar img,
+.your-img img,
+.replied-user-avatar img {
+    max-width: 2.25rem;
+}
+
+.user-profile,
+.replied-user-profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.user-name p,
+.replied-user-name p {
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: hsl(238, 40%, 52%);
+}
+
+.comment-duration p,
+.replied-user-comment-duration p {
+    color: hsl(211, 10%, 45%);
+}
+
+.comment-text p {
+    word-wrap: break-word;
+    max-width: 100%;
+    font-size: 1.08rem;
+    color: hsl(211, 10%, 45%);
+    line-height: 1.55rem;
+    min-width: 5rem;
+}
+
+.reply-btn,
+.delete-edit-btn {
+    position: absolute;
+    top: 32px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.reply-btn:hover,
+.delete-btn:hover,
+.edit-btn:hover {
+    opacity: 0.5;
+}
+
+.reply-text {
+    color: hsl(238, 40%, 52%);
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.reply-box,
+.comment-writing-box {
+    height: 6rem;
+    position: relative;
+}
+
+.reply-box,
+.comment-writing-box {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: flex-start;
+    border-radius: 10px;
+
+}
+
+.comment-writing-box {
+    width: 93%;
+}
+
+.text-box,
+.comment-text-box {
+    width: 74%;
+}
+
+.text-box textarea,
+.comment-text-box textarea {
+    height: 4rem;
+    min-width: 94%;
+    border-radius: 8px;
+    border: 1px solid;
+    resize: none;
+    padding: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.text-box textarea:focus,
+.comment-text-box textarea:focus {
+    border: 1px solid hsl(238, 40%, 52%);
+    outline: none;
+}
+
+.edit-comment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.edit-comment-section textarea {
+    resize: none;
+    height: 4rem;
+    padding: 5px 6px;
+    font-size: 1.01rem;
+    width: 70%;
+    border: 1px solid;
+    outline: none;
+}
+
+.your-reply-btn,
+.user-reply-btn,
+.update-btn,
+.send-comment-btn p {
+    cursor: pointer;
+}
+
+.your-reply-btn p,
+.user-reply-btn p,
+.update-btn,
+.send-comment-btn p {
+    text-transform: capitalize;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(238, 40%, 52%);
+    text-align: center;
+    padding: 0.8rem 1.25rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+.comment-reply {
+    border-left: 1.5px solid hsl(238deg 31.76% 78.07%);
+    margin: 0 0 0 3.5rem;
+    padding: 0 0 0 3.5rem;
+}
+
+.replied-comment-section {
+    min-height: 11.3rem;
+    max-width: 36rem;
+    justify-content: flex-start;
+    padding: 1.25rem;
+    margin-top: 1.2rem;
+    padding: 0 1.35rem;
+}
+
+.replied-user-name span {
+    color: white;
+    background-color: hsl(238, 40%, 52%);
+    font-weight: normal;
+    padding: 0.15rem 0.35rem;
+    border-radius: 6px;
+    margin: 0 0 0 0.5rem;
+}
+
+.replied-user-text p {
+    color: hsl(211, 10%, 45%);
+}
+
+.respondend-name {
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+}
+
+.delete-edit-btn {
+    gap: 1.2rem;
+    top: 35px;
+}
+
+.delete-btn,
+.edit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.delete-btn p,
+.edit-btn p {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.delete-btn p {
+    color: hsl(358, 79%, 66%);
+}
+
+.edit-btn p {
+    color: hsl(238, 40%, 52%);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.404);
+    height: 132%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.delete-comment-warning {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem 1rem;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    max-width: 20rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.warning-paragraph {
+    color: hsl(211, 10%, 45%);
+    font-size: 1.08rem;
+    margin-bottom: 0.5rem;
+}
+
+.warning-btn button {
+    border: none;
+    outline: none;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    width: 9rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.reject {
+    background-color: hsl(211, 10%, 45%);
+}
+
+.accept {
+    background-color: hsl(358, 79%, 66%);
+}
+
+.display-none {
+    display: none;
+}
+
+@media only screen and (max-width:630px) {
+
+    .comment-card,
+    .replied-comment-section {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .comment-card {
+        max-width: 36rem;
+    }
+
+    .comment-2 {
+        max-width: 35.68rem;
+    }
+
+    .vote,
+    .replied-comment-vote {
+        display: flex;
+        height: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(228, 33%, 97%);
+        padding: 0.6rem;
+        border-radius: 5px;
+        gap: 1.1rem;
+    }
+
+    .vote-down,
+    .reply-vote-down,
+    .replied-comment-vote-down {
+        height: 24px;
+    }
+
+    .replied-comment-section {
+        padding: 15px 1.35rem;
+    }
+
+    .reply-btn,
+    .delete-edit-btn {
+        top: 82%;
+        right: 25px;
+    }
+
+    .reply-box {
+        height: 10rem;
+        max-width: 92%;
+    }
+
+    .comment-writing-box {
+        height: 10rem;
+        max-width: 89%;
+    }
+
+    .user-avatar img,
+    .your-img img,
+    .replied-user-avatar img {
+        max-width: 2.5rem;
+    }
+
+    .text-box,
+    .comment-text-box {
+        position: absolute;
+        top: 5.65rem;
+        left: 25px;
+        min-width: 90%;
+    }
+
+    .comment-reply {
+        border-left: 1.5px solid hsl(238deg 31.76% 78.07%);
+        margin: 0 0 0 2rem;
+        padding: 0 0 0 2.5rem;
+    }
+
+    .delete-comment-warning {
+        left: 25%;
+    }
+
+}
+
+@media only screen and (max-width: 510px) {
+
+    .comment-reply {
+        border-left: 1.5px solid hsl(238deg 31.76% 78.07%);
+        margin: 0 0 0 2rem;
+        padding: 0 0 0 1rem;
+    }
+
+    .text-box,
+    .comment-text-box {
+        min-width: 85%;
+    }
+
+    .replied-user-name p {
+        font-size: 0.95rem;
+    }
+
+    .replied-user-avatar img {
+        max-width: 1.95rem;
+    }
+
+    .replied-user-profile {
+        gap: 0.5rem;
+    }
+
+    .replied-user-name span {
+        margin: 0 0 0 0.1rem;
+    }
+
+    .comment-writing-box {
+        height: 9rem;
+        max-width: 86%;
+    }
+
+    .delete-comment-warning {
+        left: 11%;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+    .user-profile,
+    .replied-user-profile {
+        gap: 0.35rem;
+    }
+
+    .reply-btn,
+    .delete-edit-btn {
+        top: 83%;
+    }
+
+    .user-avatar img,
+    .your-img img,
+    .replied-user-avatar img {
+        max-width: 1.95rem;
+    }
+
+    .user-name p,
+    .comment-duration p {
+        font-size: 0.85rem;
+    }
+
+    .replied-user-comment-duration p,
+    .replied-user-name p {
+        font-size: 0.8rem;
+    }
+
+    .comment-reply {
+        margin: 0 0 0 1rem;
+        padding: 0 0 0 1rem;
+    }
+
+    .delete-edit-btn {
+        gap: 0.5rem;
+
+    }
+
+}

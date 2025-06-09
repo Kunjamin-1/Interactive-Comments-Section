@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Interactive comments section</title>
+</head>
+
+<body>
+    <div class="comment-container">
+        <div class="comment-1">
+            <div class="comment-card">
+                <div class="vote">
+                    <button class="vote-up">
+                        <img src="images/icon-plus.svg" alt="vote-up">
+                    </button>
+                    <div class="vote-value">12</div>
+                    <button class="vote-down">
+                        <img src="images/icon-minus.svg" alt="vote-down">
+                    </button>
+                </div>
+                <div class="comment-section">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="images/avatars/image-amyrobson.png" alt="amyrobson">
+                        </div>
+                        <div class="user-name">
+                            <p>amyrobson</p>
+                        </div>
+                        <div class="comment-duration">
+                            <p>1 month ago</p>
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        <p>Impressive! Though it seems the drag feature could be improved. But overall it looks
+                            incredible. You've nailed the design and the responsiveness at various breakpoints works
+                            really well.</p>
+                    </div>
+                </div>
+                <div class="reply-btn">
+                    <img src="images/icon-reply.svg" alt="reply">
+                    <div class="reply-text">reply</div>
+                </div>
+            </div>
+            <div class="reply-box display-none">
+                <div class="your-img">
+                    <img src="images/avatars/image-juliusomo.webp" alt="juliusomo">
+                </div>
+                <div class="text-box">
+                    <textarea name="comment-1-textarea" id="comment-1-textarea"></textarea>
+                </div>
+                <div class="your-reply-btn" id="comment-1-reply" data-comment="comment-1"
+                    data-textarea="comment-1-textarea" data-username="amyrobson">
+                    <p>reply</p>
+                </div>
+            </div>
+            <div class="comment-reply" id="reply-on-comment-1">
+            </div>
+        </div>
+        <div class="comment-2">
+            <div class="comment-card">
+                <div class="vote">
+                    <button class="vote-up">
+                        <img src="images/icon-plus.svg" alt="vote-up">
+                    </button>
+                    <div class="vote-value">5</div>
+                    <button class="vote-down">
+                        <img src="images/icon-minus.svg" alt="vote-down">
+                    </button>
+                </div>
+                <div class="comment-section">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="images/avatars/image-maxblagun.webp" alt="maxblagun">
+                        </div>
+                        <div class="user-name">
+                            <p>maxblagun</p>
+                        </div>
+                        <div class="comment-duration">
+                            <p>2 weeks ago</p>
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        <p>Impressive! Though it seems the drag feature could be improved. But overall it looks
+                            incredible. You've nailed the design and the responsiveness at various breakpoints works
+                            really well.</p>
+                    </div>
+                </div>
+                <div class="reply-btn">
+                    <img src="images/icon-reply.svg" alt="icon-reply">
+                    <div class="reply-text">reply</div>
+                </div>
+            </div>
+            <div class="reply-box display-none">
+                <div class="your-img">
+                    <img src="images/avatars/image-juliusomo.webp" alt="juliusomo">
+                </div>
+                <div class="text-box">
+                    <textarea name="comment-2-textarea" id="comment-2-textarea"></textarea>
+                </div>
+                <div class="your-reply-btn" id="comment-2-reply" data-comment="comment-2"
+                    data-textarea="comment-2-textarea" data-username="maxblagun">
+                    <p>reply</p>
+                </div>
+            </div>
+            <div class="comment-reply" id="reply-on-comment-2">
+                <div class="replied-comment-section someone-else-commented">
+                    <div class="replied-comment-vote">
+                        <button class="replied-comment-vote-up vote-up">
+                            <img src="images/icon-plus.svg" alt="vote">
+                        </button>
+                        <div class="replied-comment-vote-value">4</div>
+                        <button class="replied-comment-vote-down vote-down">
+                            <img src="images/icon-minus.svg" alt="vote-down">
+                        </button>
+                    </div>
+                    <div class="replied-user-comment-section">
+                        <div class="replied-user-profile">
+                            <div class="replied-user-avatar">
+                                <img src="images/avatars/image-ramsesmiron.webp" alt="ramsesmiron">
+                            </div>
+                            <div class="replied-user-name">
+                                <p>ramsesmiron</p>
+                            </div>
+                            <div class="replied-user-comment-duration">
+                                <p>1 week ago</p>
+                            </div>
+                        </div>
+                        <div class="replied-user-text">
+                            <p><span class="respondend-name">@maxblagun</span> If you're still new, I'd recommend
+                                focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very
+                                tempting to jump ahead but lay a solid foundation first.</p>
+                        </div>
+                    </div>
+                    <div class="user-replied-btn reply-btn">
+                        <img src="images/icon-reply.svg" alt="reply">
+                        <div class="reply-text">reply</div>
+                    </div>
+                </div>
+                <div class="reply-box display-none">
+                    <div class="your-img">
+                        <img src="images/avatars/image-juliusomo.webp" alt="juliusomo">
+                    </div>
+                    <div class="text-box">
+                        <textarea name="reply-textarea" id="reply-textarea"></textarea>
+                    </div>
+                    <div class="user-reply-btn" id="user-reply" data-comment="comment-2" data-textarea="reply-textarea"
+                        data-username="ramsesmiron">
+                        <p>reply</p>
+                    </div>
+                </div>
+                <div class="replied-comment-section">
+                    <div class="replied-comment-vote">
+                        <button class="replied-comment-vote-up vote-up">
+                            <img src="images/icon-plus.svg" alt="vote">
+                        </button>
+                        <div class="replied-comment-vote-value">0</div>
+                        <button class="replied-comment-vote-down vote-down">
+                            <img src="images/icon-minus.svg" alt="vote-down">
+                            </butt>
+                    </div>
+                    <div class="replied-user-comment-section">
+                        <div class="replied-user-profile">
+                            <div class="replied-user-avatar">
+                                <img src="images/avatars/image-juliusomo.webp" alt="juliusomo">
+                            </div>
+                            <div class="replied-user-name">
+                                <p>juliusomo <span>you</span></p>
+                            </div>
+                            <div class="replied-user-comment-duration">
+                                <p>2 days ago</p>
+                            </div>
+                        </div>
+                        <div class="replied-user-text">
+                            <p><span class="respondend-name">@ramsesmiron </span> I couldn't agree more with this.
+                                Everything moves so fast and it always seems like everyone knows the newest
+                                library/framework. But the fundamentals are what stay constant.</p>
+                        </div>
+                        <div class="edit-comment-section display-none">
+                            <textarea name="edit-comment-2" id="edit-comment-2"></textarea>
+                            <div class="update-btn">update</div>
+                        </div>
+                    </div>
+                    <div class="delete-edit-btn">
+                        <div class="delete-btn">
+                            <img src="images/icon-delete.svg" alt="delete-btn">
+                            <p class="delete-text">delete</p>
+                        </div>
+                        <div class="edit-btn">
+                            <img src="images/icon-edit.svg" alt="edit-btn">
+                            <p class="edit-text">edit</p>
+                        </div>
+                    </div>
+                    <div class="update-btn display-none">update</div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-writing-box">
+            <div class="your-img">
+                <img src="images/avatars/image-juliusomo.webp" alt="juliusomo">
+            </div>
+            <div class="comment-text-box">
+                <textarea name="writing-box-text" id="writing-box-text" placeholder="Add your comment..."></textarea>
+            </div>
+            <div class="send-comment-btn" data-username="juliusomo">
+                <p>send</p>
+            </div>
+        </div>
+        <footer class="display-none">
+            <div class="delete-comment-warning">
+                <h2>Delete comment</h2>
+                <p class="warning-paragraph">Are you sure to delete this comment? This will remove comment and can't be
+                    undone.</p>
+                <div class="warning-btn">
+                    <button class="reject">no,cancel</button>
+                    <button class="accept">yes,delete</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
